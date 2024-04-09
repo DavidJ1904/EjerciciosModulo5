@@ -5,16 +5,25 @@ class Lapto:
         self.memoria = memoria
         self.costo = costo
         self.impuestos = impuestos
-
+    #Metodos de instancia
     def valor_final(self):
         return self.costo + self.impuestos
     
     def valor_descuento(self, descuento):
         return (self.costo*descuento)/100
 
-Lapto_Pepito = Lapto("levono","i7",32)
-
-
-print(Lapto_Pepito.__dict__)
-print(Lapto_Pepito.valor_final())
-print(f"El valor de descuento: {Lapto_Pepito.valor_descuento(10)}")
+    #Metodos estaticos
+    @staticmethod
+    def comparar_costo(Laptop1, Laptop2):
+        if Laptop1.costo == Laptop2.costo:
+            return "Los costos son iguales"
+        return "Los costos son diferentes"
+    
+    #Metodo de clase
+    @classmethod
+    def asus_laptops(cls, costo ):
+        marca = "Asus"
+        procesador = "i5"
+        memoria = 16
+        return cls(marca, procesador, memoria, costo)
+    

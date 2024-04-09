@@ -29,9 +29,7 @@ class auto:
              print("ya estoy usado")
         elif auto_comprado.kiometraje>100000:
             print("¡ya dejame descansar!")
-
-
-        
+  
 auto_comprado = auto("Renault","Megane",2004)
 auto.mostar_informacion()
 auto.actializar_kilometraje(10000)
