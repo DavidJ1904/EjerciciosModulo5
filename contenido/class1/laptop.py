@@ -1,3 +1,5 @@
+import random
+
 class Lapto:
     def __init__(self, marca, procesador, memoria, costo = 500, impuestos = 10):
         self.marca = marca
@@ -11,6 +13,15 @@ class Lapto:
     
     def valor_descuento(self, descuento):
         return (self.costo*descuento)/100
+    
+    def realizar_diagnostico_sistema(self):
+        resultado ={
+        "MARCA":f"{self.marca}",
+        "PROCESADOR":f"{self.procesador}",
+        "MEMORIA DISCO DURO": f"{self.memoria} GB",
+        "BATERIA": "OK" if random.choice([True,False]) else "Cambiar bateria"
+    }
+        return resultado
 
     #Metodos estaticos
     @staticmethod
