@@ -22,7 +22,16 @@ class Lapto:
         "BATERIA": "OK" if random.choice([True,False]) else "Cambiar bateria"
     }
         return resultado
-
+    
+    #Polimorfismo
+    def realizar_informe_uso(self):
+        resultado_informe={
+            "Tipo": "Generica",
+            "Uso Recomendado": "Tarea cotidianas",
+            "Horas de uso": 5,
+            "Diagnostico actual": self.realizar_diagnostico_sistema()
+        }
+        return resultado_informe
     #Metodos estaticos
     @staticmethod
     def comparar_costo(Laptop1, Laptop2):

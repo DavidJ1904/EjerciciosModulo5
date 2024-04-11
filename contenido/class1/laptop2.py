@@ -26,7 +26,7 @@ class Laptop_Business(Lapto):
   
   #METODO PARA MOSTRAR 
   def __str__(self) -> str:
-    return f" marca: {self.marca} \n procesador: {self.procesador} \n memoria: {self.memoria} \n costo: {self.costo} \n impuesto: {self.impuesto} \n"
+    return f" marca: {self.marca} \n procesador: {self.procesador} \n memoria: {self.memoria} \n costo: {self.costo} \n impuesto: {self.impuestos} \n"
     
 
 laptop_juanito = Laptop_Business("MSI","I7",500)

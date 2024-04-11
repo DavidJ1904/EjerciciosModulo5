@@ -4,6 +4,9 @@ class Laptop_gaming(Lapto):
     def __init__(self, marca, procesador, memoria,tarjeta_graf, costo=500, impuestos=10):
         super().__init__(marca, procesador, memoria, costo, impuestos)
         self.tarjeta_graf = tarjeta_graf
+
+    def __str__(self):
+        return f"Marca: {self.marca} \n Procesador: {self.procesador} \n Memoria: {self.memoria} \n Tarjeta Gráfica: {self.tarjeta_graf} \n Costo: {self.costo} \n Impuestos: {self.impuestos}"
     
     def realizar_diagnostico_sistema(self):
         resultado_diagnostico = super().realizar_diagnostico_sistema(); #ALMACENARLO EN UNA VARIABLE 
@@ -25,4 +28,14 @@ class Laptop_gaming(Lapto):
                 fps= fps_base
             resultados[juego] = f"{fps} FPS"
         return resultados
+    
+    def realizar_informe_uso(self):
+        informe = super().realizar_informe_uso()
+        informe.update({
+            "Tipo": "Gaming",
+            "Uso Recomendado": "Juego de video",
+            "Horas de uso": 10,
+            "Recomendaciones de sofware": ["Antivirus","VPN"]
+        })
+        return informe
     pass
